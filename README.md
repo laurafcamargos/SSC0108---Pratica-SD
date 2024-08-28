@@ -62,20 +62,21 @@ END Structural;
 
 RTL Viewer:
 
-<div align ="center">
-    <img src ="" style="max-width: 100%;" alt="img1">
-</div>
+[PDF da Part II](src/rtl_part2.pdf)
 
 Technology Map Viewer:
 
-<div align ="center">
-    <img src ="imgs/Part2_Img2.png" style="max-width: 100%;" alt="img1">
-</div>
+[PDF da Part II](src/tech_viewer_part2.pdf)
 
 Gráfico de ondas da simulação(Modelsim):
 
 <div align ="center">
-    <img src ="imgs/Part2_Img3.png" style="max-width: 100%;" alt="img1">
+    <img src ="src/part2.png" style="max-width: 100%;" alt="img1">
+</div>
+
+Configuração dos pinos da placa DE2-115 para simulação(Quartus):
+<div align ="center">
+    <img src ="src/pin_planner_part2.png" style="max-width: 100%;" alt="img1">
 </div>
 
 Codigo VHDL:
@@ -128,6 +129,7 @@ SYNTHESIZED_WIRE_0 <= NOT(D);
 END bdf_type;
 
 ```
+[Link para os arquivos usados no Quartus](C%C3%B3digos-Quartus/part2,3,4.zip)
 
 ## Part III
 
