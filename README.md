@@ -19,7 +19,7 @@ Versão ModelSim: ModelSim - Intel FPGA Starter Edition 10.5b <br>
 
 RTL Viewer:
 
-[PDF da Pargithubt I](src/RTL_viewer.pdf)
+[PDF da Part I](src/RTL_viewer.pdf)
 
 Technology Map Viewer:
 
@@ -56,7 +56,7 @@ BEGIN
 END Structural;
 
 ```
-[Link para o Código usado no Quartus](C%C3%B3digos-Quartus/part1.zip)
+[Link para os arquivos usados no Quartus](C%C3%B3digos-Quartus/part1.zip)
 	
 ## Part II
 
