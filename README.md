@@ -140,7 +140,7 @@ RTL Viewer:
 
 Technology Map Viewer:
 
-[PDF da Part II](src/tech_viewer_part3.pdf)
+[PDF da Part III](src/tech_viewer_part3.pdf)
 
 Gráfico de ondas da simulação(Modelsim):
 
@@ -208,14 +208,16 @@ END bdf_type;
 
 RTL Viewer:
 
-<div align ="center">
-    <img src ="imgs/Part4_Img1.png" style="max-width: 100%;" alt="img1">
-</div>
+[PDF da Part IV](src/rtl_4.pdf)
+
+Technology Map Viewer:
+
+[PDF da Part IV](src/map_4.pdf)
 
 Gráfico de ondas da simulação(Modelsim):
 
 <div align ="center">
-    <img src ="imgs/Part4_Img2.png" style="max-width: 100%;" alt="img1">
+    <img src ="" style="max-width: 100%;" alt="img1">
 </div>
 
 Codigo VHDL Principal:
@@ -243,5 +245,5 @@ END IF ;
 END PROCESS ;
 END Behavior ;
 
-
 ```
+[Link para os arquivos usados no Quartus](C%C3%B3digos-Quartus/part2,3,4.zip)
