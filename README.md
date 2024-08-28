@@ -135,16 +135,18 @@ END bdf_type;
 
 RTL Viewer:
 
-<div align ="center">
-    <img src ="imgs/Part3_Img1.png" style="max-width: 100%;" alt="img1">
-</div>
+[PDF da Part III](src/rtl_part3.pdf)
+
 
 Technology Map Viewer:
 
-<div align ="center">
-    <img src ="imgs/Part3_Img2.png" style="max-width: 100%;" alt="img1">
-</div>
+[PDF da Part II](src/tech_viewer_part3.pdf)
 
+Gráfico de ondas da simulação(Modelsim):
+
+<div align ="center">
+    <img src ="src/part3.png" style="max-width: 100%;" alt="img1">
+</div>
 
 Codigo VHDL:
 
@@ -199,6 +201,8 @@ SYNTHESIZED_WIRE_0 <= NOT(clk);
 END bdf_type;
 
 ```
+[Link para os arquivos usados no Quartus](C%C3%B3digos-Quartus/part2,3,4.zip)
+
 
 ## Part IV
 
