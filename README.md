@@ -2,7 +2,7 @@
 
 Projeto 1: Latches, Flip-flops, and Registers.
 
-# Introdução
+# Softwares utilizados
 
 Versão do Quartus: Quartus Prime 21.1 <br>
 Versão ModelSim: ModelSim - Intel FPGA Starter Edition 10.5b <br>
@@ -32,20 +32,23 @@ Codigo VHDL:
 ```
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+
 ENTITY part1 IS
-PORT ( Clk, R, S : IN STD_LOGIC;
-Q : OUT STD_LOGIC);
+ PORT ( Clk, R, S : IN STD_LOGIC;
+	Q : OUT STD_LOGIC);
 END part1;
+
+
 ARCHITECTURE Structural OF part1 IS
-SIGNAL R_g, S_g, Qa, Qb : STD_LOGIC ;
-ATTRIBUTE KEEP : BOOLEAN;
-ATTRIBUTE KEEP OF R_g, S_g, Qa, Qb : SIGNAL IS TRUE;
+ SIGNAL R_g, S_g, Qa, Qb : STD_LOGIC ;
+ ATTRIBUTE KEEP : BOOLEAN;
+ ATTRIBUTE KEEP OF R_g, S_g, Qa, Qb : SIGNAL IS TRUE;
 BEGIN
-R_g <= R AND Clk;
-S_g <= S AND Clk;
-Qa <= NOT (R_g OR Qb);
-Qb <= NOT (S_g OR Qa);
-Q <= Qa;
+ R_g <= R AND Clk;
+ S_g <= S AND Clk;
+ Qa <= NOT (R_g OR Qb);
+ Qb <= NOT (S_g OR Qa);
+ Q <= Qa;
 END Structural;
 
 ```
@@ -74,7 +77,51 @@ Gráfico de ondas da simulação(Modelsim):
 Codigo VHDL:
 
 ```
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
 
+LIBRARY work;
+
+ENTITY latchD IS 
+	PORT
+	(
+		D :  IN  STD_LOGIC;
+		CLK :  IN  STD_LOGIC;
+		Qa :  OUT  STD_LOGIC
+	);
+END latchD;
+
+ARCHITECTURE bdf_type OF latchD IS 
+
+SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_4 :  STD_LOGIC;
+
+
+BEGIN 
+Qa <= SYNTHESIZED_WIRE_4;
+
+
+
+SYNTHESIZED_WIRE_2 <= NOT(CLK AND D);
+
+
+SYNTHESIZED_WIRE_3 <= NOT(SYNTHESIZED_WIRE_0 AND CLK);
+
+
+SYNTHESIZED_WIRE_4 <= NOT(SYNTHESIZED_WIRE_1 AND SYNTHESIZED_WIRE_2);
+
+
+SYNTHESIZED_WIRE_1 <= NOT(SYNTHESIZED_WIRE_3 AND SYNTHESIZED_WIRE_4);
+
+
+SYNTHESIZED_WIRE_0 <= NOT(D);
+
+
+
+END bdf_type;
 
 ```
 
@@ -97,27 +144,25 @@ Codigo VHDL:
 
 ```
 LIBRARY ieee;
-USE ieee.std_logic_1164.all;
+USE ieee.std_logic_1164.all; 
 
 LIBRARY work;
 
-ENTITY p02 IS
+ENTITY masterslaveD IS 
 	PORT
 	(
-    	D :  IN  STD_LOGIC;
-    	Clk :  IN  STD_LOGIC;
-    	Q :  OUT  STD_LOGIC;
-    	NQ :  OUT  STD_LOGIC
+		D :  IN  STD_LOGIC;
+		clk :  IN  STD_LOGIC;
+		Q :  OUT  STD_LOGIC
 	);
-END p02;
+END masterslaveD;
 
-ARCHITECTURE bdf_type OF p02 IS
+ARCHITECTURE bdf_type OF masterslaveD IS 
 
-COMPONENT p01
+COMPONENT latchd
 	PORT(D : IN STD_LOGIC;
-     	Clk : IN STD_LOGIC;
-     	Qa : OUT STD_LOGIC;
-     	Qb : OUT STD_LOGIC
+		 CLK : IN STD_LOGIC;
+		 Qa : OUT STD_LOGIC
 	);
 END COMPONENT;
 
@@ -125,22 +170,25 @@ SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
 
 
-BEGIN
+BEGIN 
 
-b2v_inst : p01
+
+
+b2v_inst : latchd
 PORT MAP(D => D,
-     	Clk => SYNTHESIZED_WIRE_0,
-     	Qa => SYNTHESIZED_WIRE_1);
+		 CLK => SYNTHESIZED_WIRE_0,
+		 Qa => SYNTHESIZED_WIRE_1);
 
 
-b2v_inst1 : p01
+b2v_inst1 : latchd
 PORT MAP(D => SYNTHESIZED_WIRE_1,
-     	Clk => Clk,
-     	Qa => Q,
-     	Qb => NQ);
+		 CLK => clk,
+		 Qa => Q);
 
 
-SYNTHESIZED_WIRE_0 <= NOT(Clk);
+SYNTHESIZED_WIRE_0 <= NOT(clk);
+
+
 
 END bdf_type;
 
@@ -163,116 +211,27 @@ Gráfico de ondas da simulação(Modelsim):
 Codigo VHDL Principal:
 
 ```
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-
-LIBRARY work;
-
-ENTITY p04 IS
-    PORT
-    (
-   	 D :  IN  STD_LOGIC;
-   	 Clk :  IN  STD_LOGIC;
-   	 Qa :  OUT  STD_LOGIC;
-   	 NQa :  OUT  STD_LOGIC;
-   	 Qb :  OUT  STD_LOGIC;
-   	 NQb :  OUT  STD_LOGIC;
-   	 Qc :  OUT  STD_LOGIC;
-   	 NQc :  OUT  STD_LOGIC
-    );
-END p04;
-
-ARCHITECTURE bdf_type OF p04 IS
-
-COMPONENT latch1
-    PORT(D : IN STD_LOGIC;
-		 Clk : IN STD_LOGIC;
-		 Q : OUT STD_LOGIC;
-		 NQ : OUT STD_LOGIC
-    );
-END COMPONENT;
-
-COMPONENT latch2
-    PORT(D : IN STD_LOGIC;
-		 Clk : IN STD_LOGIC;
-		 Q : OUT STD_LOGIC;
-		 NQ : OUT STD_LOGIC
-    );
-END COMPONENT;
-
-
-Signal w1: std_logic;
-
-
-BEGIN
-
-
-inst1 : latch1
-PORT MAP(D => D,
-		 Clk => Clk,
-		 Q => Qa,
-		 NQ => NQa);
-   	 
-inst2 : latch2
-PORT MAP(D => D,
-		 Clk => Clk,
-		 Q => Qb,
-		 NQ => NQb);
-   	 
-inst3 : latch2
-PORT MAP(D => D,
-		 Clk => w1,
-		 Q => Qc,
-		 NQ => NQc);
-
-
-w1 <= NOT(Clk);
-
-
-
-END bdf_type;
-```
-
-Codigo Latch 1:
-
-```
 LIBRARY ieee ;
 USE ieee.std_logic_1164.all ;
-ENTITY latch1 IS
+ENTITY part4 IS
 PORT ( D, Clk : IN STD_LOGIC ;
-Q, NQ : OUT STD_LOGIC) ;
-END latch1 ;
-ARCHITECTURE Behavior OF latch1 IS
+Q1,Q2,Q3 : OUT STD_LOGIC) ;
+END part4 ;
+ARCHITECTURE Behavior OF part4 IS
 BEGIN
 PROCESS ( D, Clk )
 BEGIN
 IF Clk = '1' THEN
-Q <= D ;
-NQ <= NOT(D);
+Q1 <= D ;
 END IF ;
-END PROCESS ;
-END Behavior ;
-
-```
-
-Codigo Latch 2:
-
-```
-LIBRARY ieee ;
-USE ieee.std_logic_1164.all ;
-ENTITY latch2 IS
-PORT ( D, Clk : IN STD_LOGIC ;
-Q, NQ : OUT STD_LOGIC) ;
-END latch2 ;
-ARCHITECTURE Behavior OF latch2 IS
-BEGIN
-PROCESS ( D, Clk )
-BEGIN
 IF rising_edge(Clk) THEN
-Q <= D ;
-NQ <= NOT(D) ;
+Q2 <= D ;
+END IF ;
+IF falling_edge(Clk) THEN
+Q3 <= D ;
 END IF ;
 END PROCESS ;
 END Behavior ;
+
 
 ```
