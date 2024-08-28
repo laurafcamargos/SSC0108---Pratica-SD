@@ -19,13 +19,7 @@ Versão ModelSim: ModelSim - Intel FPGA Starter Edition 10.5b <br>
 
 RTL Viewer:
 
-<<<<<<< Updated upstream
-[PDF da Part I](src/RTL_viewer.pdf)
-=======
-<div align ="center">
-    <img src ="src/RTL_viewer.pdf" style="max-width: 100%;" alt="img1">
-</div>
->>>>>>> Stashed changes
+[PDF da Pargithubt I](src/RTL_viewer.pdf)
 
 Technology Map Viewer:
 
