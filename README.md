@@ -56,7 +56,7 @@ BEGIN
 END Structural;
 
 ```
-<a href = "Block1.bdf">Link</a>
+<a href = "Códigos-Quartos/part1.zip">Código usado no Quartus</a>
 	
 ## Part II
 
