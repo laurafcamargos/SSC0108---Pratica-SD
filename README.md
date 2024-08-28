@@ -2,6 +2,14 @@
 
 Projeto 1: Latches, Flip-flops, and Registers.
 
+### Alunos
+
+|        Nome                         |    NUSP   |       
+|:-----------------------------------:|:---------:|  
+|   Laura Fernandes Camargos          |  13692334 |   
+|   Sandy da Costa Dutra       		  |  12544570 |   
+|   Vitor Nishimura					  |           | 
+
 # Softwares utilizados
 
 Versão do Quartus: Quartus Prime 21.1 <br>
@@ -12,19 +20,19 @@ Versão ModelSim: ModelSim - Intel FPGA Starter Edition 10.5b <br>
 RTL Viewer:
 
 <div align ="center">
-    <img src ="imgs/Part1_Img1.png" style="max-width: 100%;" alt="img1">
+    <img src ="src/RTL_viewer" style="max-width: 100%;" alt="img1">
 </div>
 
 Technology Map Viewer:
 
 <div align ="center">
-    <img src ="imgs/Part1_Img2.png" style="max-width: 100%;" alt="img1">
+    <img src ="scr/post_fitting.pdf" style="max-width: 100%;" alt="img1">
 </div>
 
 Gráfico de ondas da simulação(Modelsim):
 
 <div align ="center">
-    <img src ="imgs/Part1_Img3.png" style="max-width: 100%;" alt="img1">
+    <img src ="src/part1.png" style="max-width: 100%;" alt="img1">
 </div>
 
 Codigo VHDL:
@@ -59,7 +67,7 @@ END Structural;
 RTL Viewer:
 
 <div align ="center">
-    <img src ="imgs/Part2_Img1.png" style="max-width: 100%;" alt="img1">
+    <img src ="" style="max-width: 100%;" alt="img1">
 </div>
 
 Technology Map Viewer:
