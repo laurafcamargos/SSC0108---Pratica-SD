@@ -1,6 +1,7 @@
 # SSC0108 - Prática-SD
 
 Projeto 1: Latches, Flip-flops, and Registers.
+[Visualizar o exercício completo](src/lab3.pdf)
 
 ### Alunos
 
