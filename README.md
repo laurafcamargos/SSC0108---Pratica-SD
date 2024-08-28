@@ -217,7 +217,7 @@ Technology Map Viewer:
 Gráfico de ondas da simulação(Modelsim):
 
 <div align ="center">
-    <img src ="simulacao4.PNG" style="max-width: 100%;" alt="img1">
+    <img src ="src/simulacao4.PNG" style="max-width: 100%;" alt="img1">
 </div>
 
 Codigo VHDL Principal:
