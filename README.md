@@ -7,7 +7,7 @@ Projeto 1: Latches, Flip-flops, and Registers.
 Versão do Quartus: Quartus Prime 21.1 <br>
 Versão ModelSim: ModelSim - Intel FPGA Starter Edition 10.5b <br>
 
-## Part 1
+## Part I
 
 RTL Viewer:
 
@@ -54,7 +54,7 @@ END Structural;
 ```
 <a href = "Block1.bdf">Link</a>
 	
-## Part 2
+## Part II
 
 RTL Viewer:
 
@@ -125,7 +125,7 @@ END bdf_type;
 
 ```
 
-## Part 3
+## Part III
 
 RTL Viewer:
 
@@ -194,7 +194,7 @@ END bdf_type;
 
 ```
 
-## Part 4
+## Part IV
 
 RTL Viewer:
 
