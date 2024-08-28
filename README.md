@@ -1,15 +1,14 @@
 # SSC0108 - Prática-SD
 
-Projeto 1: Latches, Flip-flops, and Registers.
-[Visualizar o exercício completo](src/lab3.pdf)
+[Projeto 1: Latches, Flip-flops, and Registers.](src/lab3.pdf)
 
 ### Alunos
 
 |        Nome                         |    NUSP   |       
 |:-----------------------------------:|:---------:|  
 |   Laura Fernandes Camargos          |  13692334 |   
-|   Sandy da Costa Dutra       		  |  12544570 |   
-|   Vitor Nishimura					  |           | 
+|   Sandy da Costa Dutra       	      |  12544570 |   
+|   Vitor Nishimura		      |           | 
 
 # Softwares utilizados
 
@@ -21,7 +20,7 @@ Versão ModelSim: ModelSim - Intel FPGA Starter Edition 10.5b <br>
 RTL Viewer:
 
 <div align ="center">
-    <img src ="src/RTL_viewer" style="max-width: 100%;" alt="img1">
+    [PDf da Part I](src/RTL_viewer.pdf)
 </div>
 
 Technology Map Viewer:
