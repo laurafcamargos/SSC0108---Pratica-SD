@@ -23,9 +23,7 @@ RTL Viewer:
 
 Technology Map Viewer:
 
-<div align ="center">
-    <img src ="scr/post_fitting.pdf" style="max-width: 100%;" alt="img1">
-</div>
+[PDF da Part I](src/post_fitting.pdf)
 
 Gráfico de ondas da simulação(Modelsim):
 
