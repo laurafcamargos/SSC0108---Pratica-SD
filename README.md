@@ -8,7 +8,7 @@
 |:-----------------------------------:|:---------:|  
 |   Laura Fernandes Camargos          |  13692334 |   
 |   Sandy da Costa Dutra       	      |  12544570 |   
-|   Vitor Nishimura		      |           | 
+|   Vitor Nishimura		      |  5255289  | 
 
 # Softwares utilizados
 
